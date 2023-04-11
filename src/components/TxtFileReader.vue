@@ -57,16 +57,16 @@ const handleFileChange = (event: Event) => {
               tableData.value.push({
                 className: parts[2],
                 diameter: Number(parts[3]),
-                weight: Number(parts[8].replace(',', '')),
+                weight: Number(parts[9].replace(',', '')),
               })
-              console.log('資料：', '鋼種: ' + parts[2] + ' 直徑: ' + parts[3] + ' 未出貨重: ' + parts[8])
+              console.log('資料：', '鋼種: ' + parts[2] + ' 直徑: ' + parts[3] + ' 未出貨重: ' + parts[9])
             } else if (parts.length === 15) {
               tableData.value.push({
                 className: parts[2],
                 diameter: Number(parts[3]),
-                weight: Number(parts[7].replace(',', '')),
+                weight: Number(parts[8].replace(',', '')),
               })
-              console.log('資料：', '鋼種: ' + parts[2] + ' 直徑: ' + parts[3] + ' 未出貨重: ' + parts[7])
+              console.log('資料：', '鋼種: ' + parts[2] + ' 直徑: ' + parts[3] + ' 未出貨重: ' + parts[8])
             }
           } else {
             // do nothing
