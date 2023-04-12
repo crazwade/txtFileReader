@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite --host --mode dev",
+    "build": "vue-tsc --noEmit && vite build --mode prod",
     "preview": "vite preview"
   },
   "dependencies": {
