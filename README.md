@@ -1,18 +1,17 @@
-# Vue 3 + TypeScript + Vite
+# Txt 檔案 客製化轉換
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Input: txt 需要特定格式
 
-## Recommended IDE Setup
+範例:
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+             類
+  編號       別  種別       直徑  日   期  級 日   期   訂單重量   出貨重量   未出貨重   出貨率   單價    總價          庫存量   粒數
+  ---------- -- ---------- ----- ------- -- --------- --------- --------- --------- -------- ------- ----------- ---------- ----
+   D3WV21404 K  1008K      13.00 1120217 F1 1120430    70,000              70,000     .0 %  21.000   1,470,000     70,473   33
+   D3WV21407 K  1008K      24.00 1120217 F1 1120430    20,000              20,000     .0 %  21.000     420,000          0    0
+   D3WV21408 K  1006K       9.00 1120217 F1 1120430    60,000    23,054    36,946   38.4 %  21.000     775,866     37,663   18
+   D3WV21409 K  1006K      10.00 1120217 F1 1120430    14,363     8,363     6,000   58.2 %  21.000     126,000      6,295    3
+   
+運作:
 
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+txtFileReader 會將 種別/直徑/未出貨重 提取出來做成表格方便閱讀
